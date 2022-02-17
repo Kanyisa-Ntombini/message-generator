@@ -1,9 +1,9 @@
 function create_message() {
     return {
         _hogwarts_houses: ['Slytherin', 'Gryffindor', 'Ravenclaw', 'Hufflepuff'],
-        _pets: ['cat', 'owl', 'phoenix', 'hippogriffs', 'dragon', 'toad'],
+        _pets: ['cat', 'owl', 'phoenix', 'hippogriff', 'dragon', 'toad'],
         _subjects: ['Herbology', 'Defense Against The Dark Arts', 'Charms', 'Divination', 'Transfiguration', 'Astronomy', 'Potions', 'Flying Lessons'],
-        _quotes: ['“Do not pity the dead, Harry. Pity the living, and, above all those who live without love.”– Albus Dumbledore, Harry Potter and the Deathly Hallows, Chapter 35', '“It is impossible to manufacture or imitate love”.– Horace Slughorn, Harry Potter and the Half-Blood Prince, Chapter 9', '“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”– Albus Dumbledore, Harry Potter and the Sorcerer’s Stone, Chapter 17', '“Books! And cleverness! There are more important things — friendship and bravery.– Hermione Granger, Harry Potter and the Sorcerer’s Stone, Chapter 16', '“It does not do to dwell on dreams and forget to live.” – Albus Dumbledore, Harry Potter and the Sorcerer’s Stone, Chapter 12', '“Every human life is worth the same, and worth saving.” — Kingsley Shacklebolt, Harry Potter and the Deathly Hallows, Chapter 22', '“‘The thing about growing up with Fred and George,’ said Ginny thoughtfully, ‘is that you sort of start thinking anything’s possible if you’ve got enough nerve.’” – Ginny Weasley, Harry Potter and the Order of the Phoenix, Chapter 29'],
+        _quotes: ['"Do not pity the dead, Harry. Pity the living, and, above all those who live without love." – Albus Dumbledore', '"It is impossible to manufacture or imitate love." – Horace Slughorn', '"It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends." – Albus Dumbledore', '"Books! And cleverness! There are more important things — friendship and bravery." – Hermione Granger', '"It does not do to dwell on dreams and forget to live." – Albus Dumbledore', '"Every human life is worth the same, and worth saving." — Kingsley Shacklebolt', '"If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals." – Sirius Black', '"When in doubt, go to the library." – Ron Weasley', '"We must unite inside [Hogwarts] / Or we’ll crumble from within / I have told you, I have warned you… / Let the Sorting now begin." — The Sorting Hat', '"Anything’s possible if you’ve got enough nerve." — Ginny Weasley', '"CONSTANT VIGILANCE!" — Barty Crouch, Jr'],
 
         //getters
         get hogwarts_houses() {
@@ -34,9 +34,16 @@ function create_message() {
             let subject = this.subjects[subjectNum];
             let quote = this.quotes[quoteNum];
 
-            console.log(`You are in ${house}`);
-            console.log(`Your pet is a ${pet}`);
-            console.log(`Your favourite subject is ${subject}`);
+            console.log(`Congratulations! You are in ${house} house.`);
+
+            if (pet[0] === 'a' || pet[0] === 'e' || pet[0] === 'i' || pet[0] === 'o' || pet[0] === 'u') {
+                console.log(`Your pet is an ${pet}.`);
+            } else {
+                console.log(`Your pet is a ${pet}`);
+            }
+            
+            console.log(`Your favourite subject is ${subject}.`);
+            console.log('A quote to live by:')
             console.log(quote);
 
             return '';
