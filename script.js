@@ -1,3 +1,4 @@
+//For the DOM
 function create_element_message(id, message) {
 	const newElement = document.createElement('span');
 	const newContent = document.createTextNode(message);
@@ -24,6 +25,7 @@ function display_message() {
 	create_element_message('quote', quote);
 }
 
+//Generating messages
 function createRandomNum(arr) {
 	return Math.floor(Math.random() * arr.length);
 }
@@ -49,6 +51,5 @@ function create_message() {
 		pet,
 		subject,
 		quote
-	}
-        
+	}     
 }
